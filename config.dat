@@ -1,0 +1,64 @@
+-------------------------------------------------------------------
+--	Blastoids
+--	Config File by Rob Loach (http://robloach.net)
+--
+--	Warning:
+--		Changing some of these values may have negative
+--		effects on the game.  Proceed with caution.
+--
+-------------------------------------------------------------------
+
+-- General Configuration --
+ShowFPS = true
+HighDetail = true
+Icon = "images/icon.png"
+
+-- Font --
+FontFile = "fonts/bgothl.ttf"
+
+-- Background Image --
+Background = "images/background.jpg"
+
+-- Asteroid Images --
+AsteroidsLarge = "images/large.png"
+AsteroidsLargeWidth = 150
+AsteroidsLargeHeight = 150
+
+AsteroidsMedium = "images/medium.png"
+AsteroidsMediumWidth = 80
+AsteroidsMediumHeight = 80
+
+AsteroidsSmall = "images/small.png"
+AsteroidsSmallWidth = 30
+AsteroidsSmallHeight = 30
+
+-- Bullets Image --
+Bullets = "images/bullets.png"
+BulletsWidth = 13
+BulletsHeight = 13
+
+-- Ship Image --
+Ship = "images/ship.png"
+ShipWidth = 27
+ShipHeight = 27
+
+-- Powerups --
+PowerUps = "images/powerups.png"
+PowerUpsWidth = 16
+PowerUpsHeight = 16
+
+-- Music --
+MusicOn = true
+MusicGame = "audio/game.mid"
+MusicMenu = "audio/menu.mid"
+MusicGameOver = "audio/gameover.mid"
+
+-- Sounds --
+SoundAsteroidHit = "audio/asteroidhit.wav"
+SoundAsteroidExplode = "audio/explode.wav"
+SoundShoot = "audio/shoot.mp3"
+SoundEngine = "audio/engine.wav"
+SoundPlayerExplode = "audio/playerexplode.wav"
+SoundPlayerHit = "audio/playerhit.wav"
+SoundPowerup = "audio/powerup.wav"
+SoundPlayerStart = "audio/playerstart.wav"

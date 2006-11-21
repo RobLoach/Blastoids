@@ -1,0 +1,11 @@
+Blastoids by Rob Loach ( http://www.robloach.net )
+==================================================
+
+TODO
+----
+* The source is a mess - it would be nice to clean that up
+* Have more/better sounds
+* Better music
+* New ship artwork
+* Enemy AIalien ship
+* Bosses after every five levels?

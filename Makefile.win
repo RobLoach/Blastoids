@@ -1,0 +1,159 @@
+# Project: Blastoids
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = lucid_private.res
+OBJ  = main.o lucid/graphics/graphics.o lucid/graphics/primitives.o lucid/graphics/sprite.o lucid/input/keyboard.o lucid/input/mouse.o lucid/math/math.o lucid/text/text.o lucid/time/time.o lucid/lucid.o lucid/math/vector2d.o lucid/math/rand.o lucid/graphics/image.o lucid/gui/gui.o lucid/statemachine/statemachine.o lucid/text/encoding.o lucid/file/tinyxml/tinystr.o lucid/file/tinyxml/tinyxml.o lucid/file/tinyxml/tinyxmlerror.o lucid/file/tinyxml/tinyxmlparser.o lucid/file/file.o lucid/file/highscorelist.o lucid/graphics/SDL_gfx/SDL_framerate.o lucid/graphics/SDL_gfx/SDL_gfxPrimitives.o lucid/graphics/SDL_gfx/SDL_rotozoom.o lucid/gui/baseguiobject.o lucid/gui/button.o lucid/gui/textbox.o lucid/input/input.o lucid/gui/progressbar.o lucid/gui/label.o lucid/gui/messagebox.o lucid/gui/menu.o player.o bullets.o asteroids.o states.o lucid/scripting/arguments.o lucid/scripting/script.o lucid/scripting/variable.o lucid/particles/particles.o lucid/audio/audio.o powerups.o $(RES)
+LINKOBJ  = main.o lucid/graphics/graphics.o lucid/graphics/primitives.o lucid/graphics/sprite.o lucid/input/keyboard.o lucid/input/mouse.o lucid/math/math.o lucid/text/text.o lucid/time/time.o lucid/lucid.o lucid/math/vector2d.o lucid/math/rand.o lucid/graphics/image.o lucid/gui/gui.o lucid/statemachine/statemachine.o lucid/text/encoding.o lucid/file/tinyxml/tinystr.o lucid/file/tinyxml/tinyxml.o lucid/file/tinyxml/tinyxmlerror.o lucid/file/tinyxml/tinyxmlparser.o lucid/file/file.o lucid/file/highscorelist.o lucid/graphics/SDL_gfx/SDL_framerate.o lucid/graphics/SDL_gfx/SDL_gfxPrimitives.o lucid/graphics/SDL_gfx/SDL_rotozoom.o lucid/gui/baseguiobject.o lucid/gui/button.o lucid/gui/textbox.o lucid/input/input.o lucid/gui/progressbar.o lucid/gui/label.o lucid/gui/messagebox.o lucid/gui/menu.o player.o bullets.o asteroids.o states.o lucid/scripting/arguments.o lucid/scripting/script.o lucid/scripting/variable.o lucid/particles/particles.o lucid/audio/audio.o powerups.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -mwindows -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf -lFMOD -llua5  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = blastoids.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS) -Dmain=SDL_main  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before blastoids.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "blastoids.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+lucid/graphics/graphics.o: lucid/graphics/graphics.cpp
+	$(CPP) -c lucid/graphics/graphics.cpp -o lucid/graphics/graphics.o $(CXXFLAGS)
+
+lucid/graphics/primitives.o: lucid/graphics/primitives.cpp
+	$(CPP) -c lucid/graphics/primitives.cpp -o lucid/graphics/primitives.o $(CXXFLAGS)
+
+lucid/graphics/sprite.o: lucid/graphics/sprite.cpp
+	$(CPP) -c lucid/graphics/sprite.cpp -o lucid/graphics/sprite.o $(CXXFLAGS)
+
+lucid/input/keyboard.o: lucid/input/keyboard.cpp
+	$(CPP) -c lucid/input/keyboard.cpp -o lucid/input/keyboard.o $(CXXFLAGS)
+
+lucid/input/mouse.o: lucid/input/mouse.cpp
+	$(CPP) -c lucid/input/mouse.cpp -o lucid/input/mouse.o $(CXXFLAGS)
+
+lucid/math/math.o: lucid/math/math.cpp
+	$(CPP) -c lucid/math/math.cpp -o lucid/math/math.o $(CXXFLAGS)
+
+lucid/text/text.o: lucid/text/text.cpp
+	$(CPP) -c lucid/text/text.cpp -o lucid/text/text.o $(CXXFLAGS)
+
+lucid/time/time.o: lucid/time/time.cpp
+	$(CPP) -c lucid/time/time.cpp -o lucid/time/time.o $(CXXFLAGS)
+
+lucid/lucid.o: lucid/lucid.cpp
+	$(CPP) -c lucid/lucid.cpp -o lucid/lucid.o $(CXXFLAGS)
+
+lucid/math/vector2d.o: lucid/math/vector2d.cpp
+	$(CPP) -c lucid/math/vector2d.cpp -o lucid/math/vector2d.o $(CXXFLAGS)
+
+lucid/math/rand.o: lucid/math/rand.cpp
+	$(CPP) -c lucid/math/rand.cpp -o lucid/math/rand.o $(CXXFLAGS)
+
+lucid/graphics/image.o: lucid/graphics/image.cpp
+	$(CPP) -c lucid/graphics/image.cpp -o lucid/graphics/image.o $(CXXFLAGS)
+
+lucid/gui/gui.o: lucid/gui/gui.cpp
+	$(CPP) -c lucid/gui/gui.cpp -o lucid/gui/gui.o $(CXXFLAGS)
+
+lucid/statemachine/statemachine.o: lucid/statemachine/statemachine.cpp
+	$(CPP) -c lucid/statemachine/statemachine.cpp -o lucid/statemachine/statemachine.o $(CXXFLAGS)
+
+lucid/text/encoding.o: lucid/text/encoding.cpp
+	$(CPP) -c lucid/text/encoding.cpp -o lucid/text/encoding.o $(CXXFLAGS)
+
+lucid/file/tinyxml/tinystr.o: lucid/file/tinyxml/tinystr.cpp
+	$(CPP) -c lucid/file/tinyxml/tinystr.cpp -o lucid/file/tinyxml/tinystr.o $(CXXFLAGS)
+
+lucid/file/tinyxml/tinyxml.o: lucid/file/tinyxml/tinyxml.cpp
+	$(CPP) -c lucid/file/tinyxml/tinyxml.cpp -o lucid/file/tinyxml/tinyxml.o $(CXXFLAGS)
+
+lucid/file/tinyxml/tinyxmlerror.o: lucid/file/tinyxml/tinyxmlerror.cpp
+	$(CPP) -c lucid/file/tinyxml/tinyxmlerror.cpp -o lucid/file/tinyxml/tinyxmlerror.o $(CXXFLAGS)
+
+lucid/file/tinyxml/tinyxmlparser.o: lucid/file/tinyxml/tinyxmlparser.cpp
+	$(CPP) -c lucid/file/tinyxml/tinyxmlparser.cpp -o lucid/file/tinyxml/tinyxmlparser.o $(CXXFLAGS)
+
+lucid/file/file.o: lucid/file/file.cpp
+	$(CPP) -c lucid/file/file.cpp -o lucid/file/file.o $(CXXFLAGS)
+
+lucid/file/highscorelist.o: lucid/file/highscorelist.cpp
+	$(CPP) -c lucid/file/highscorelist.cpp -o lucid/file/highscorelist.o $(CXXFLAGS)
+
+lucid/graphics/SDL_gfx/SDL_framerate.o: lucid/graphics/SDL_gfx/SDL_framerate.c
+	$(CPP) -c lucid/graphics/SDL_gfx/SDL_framerate.c -o lucid/graphics/SDL_gfx/SDL_framerate.o $(CXXFLAGS)
+
+lucid/graphics/SDL_gfx/SDL_gfxPrimitives.o: lucid/graphics/SDL_gfx/SDL_gfxPrimitives.c
+	$(CPP) -c lucid/graphics/SDL_gfx/SDL_gfxPrimitives.c -o lucid/graphics/SDL_gfx/SDL_gfxPrimitives.o $(CXXFLAGS)
+
+lucid/graphics/SDL_gfx/SDL_rotozoom.o: lucid/graphics/SDL_gfx/SDL_rotozoom.c
+	$(CPP) -c lucid/graphics/SDL_gfx/SDL_rotozoom.c -o lucid/graphics/SDL_gfx/SDL_rotozoom.o $(CXXFLAGS)
+
+lucid/gui/baseguiobject.o: lucid/gui/baseguiobject.cpp
+	$(CPP) -c lucid/gui/baseguiobject.cpp -o lucid/gui/baseguiobject.o $(CXXFLAGS)
+
+lucid/gui/button.o: lucid/gui/button.cpp
+	$(CPP) -c lucid/gui/button.cpp -o lucid/gui/button.o $(CXXFLAGS)
+
+lucid/gui/textbox.o: lucid/gui/textbox.cpp
+	$(CPP) -c lucid/gui/textbox.cpp -o lucid/gui/textbox.o $(CXXFLAGS)
+
+lucid/input/input.o: lucid/input/input.cpp
+	$(CPP) -c lucid/input/input.cpp -o lucid/input/input.o $(CXXFLAGS)
+
+lucid/gui/progressbar.o: lucid/gui/progressbar.cpp
+	$(CPP) -c lucid/gui/progressbar.cpp -o lucid/gui/progressbar.o $(CXXFLAGS)
+
+lucid/gui/label.o: lucid/gui/label.cpp
+	$(CPP) -c lucid/gui/label.cpp -o lucid/gui/label.o $(CXXFLAGS)
+
+lucid/gui/messagebox.o: lucid/gui/messagebox.cpp
+	$(CPP) -c lucid/gui/messagebox.cpp -o lucid/gui/messagebox.o $(CXXFLAGS)
+
+lucid/gui/menu.o: lucid/gui/menu.cpp
+	$(CPP) -c lucid/gui/menu.cpp -o lucid/gui/menu.o $(CXXFLAGS)
+
+player.o: player.cpp
+	$(CPP) -c player.cpp -o player.o $(CXXFLAGS)
+
+bullets.o: bullets.cpp
+	$(CPP) -c bullets.cpp -o bullets.o $(CXXFLAGS)
+
+asteroids.o: asteroids.cpp
+	$(CPP) -c asteroids.cpp -o asteroids.o $(CXXFLAGS)
+
+states.o: states.cpp
+	$(CPP) -c states.cpp -o states.o $(CXXFLAGS)
+
+lucid/scripting/arguments.o: lucid/scripting/arguments.cpp
+	$(CPP) -c lucid/scripting/arguments.cpp -o lucid/scripting/arguments.o $(CXXFLAGS)
+
+lucid/scripting/script.o: lucid/scripting/script.cpp
+	$(CPP) -c lucid/scripting/script.cpp -o lucid/scripting/script.o $(CXXFLAGS)
+
+lucid/scripting/variable.o: lucid/scripting/variable.cpp
+	$(CPP) -c lucid/scripting/variable.cpp -o lucid/scripting/variable.o $(CXXFLAGS)
+
+lucid/particles/particles.o: lucid/particles/particles.cpp
+	$(CPP) -c lucid/particles/particles.cpp -o lucid/particles/particles.o $(CXXFLAGS)
+
+lucid/audio/audio.o: lucid/audio/audio.cpp
+	$(CPP) -c lucid/audio/audio.cpp -o lucid/audio/audio.o $(CXXFLAGS)
+
+powerups.o: powerups.cpp
+	$(CPP) -c powerups.cpp -o powerups.o $(CXXFLAGS)
+
+lucid_private.res: lucid_private.rc 
+	$(WINDRES) -i lucid_private.rc --input-format=rc -o lucid_private.res -O coff 
